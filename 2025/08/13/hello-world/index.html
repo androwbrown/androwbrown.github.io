@@ -19,17 +19,19 @@
   <meta name="author" content="Androw Smith">
   <meta name="keywords" content="">
   
-    <meta name="description" content="DNS即Domain Name Server,即域名解析服务器，默认53端口、UDP连接、明文传输，可能会受到污染、劫持和监听。 DNS污染本地ISPMore info: Writing Run server1$ hexo server  More info: Server Generate static files1$ hexo generate  More info: Generating D">
+    <meta name="description" content="DNS即Domain Name Server,即域名解析服务器，默认53端口、UDP连接、明文传输，可能会受到污染、劫持和监听。 DNSDNS解析过程浏览器提取url中域名部分，首先查询浏览器缓存，若未命中，查询系统hosts文件，若未命中，则向出口网卡指定的DNS服务器发送请求。若未指定，则默认为为DHCP握手响应的DNS服务器，即一般是本地ISP的DNS服务器发起递归查询。本地ISP收到DNS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DNS简介">
 <meta property="og:url" content="http://example.com/2025/08/13/hello-world/index.html">
 <meta property="og:site_name" content="Androw&#39;s Blog">
-<meta property="og:description" content="DNS即Domain Name Server,即域名解析服务器，默认53端口、UDP连接、明文传输，可能会受到污染、劫持和监听。 DNS污染本地ISPMore info: Writing Run server1$ hexo server  More info: Server Generate static files1$ hexo generate  More info: Generating D">
+<meta property="og:description" content="DNS即Domain Name Server,即域名解析服务器，默认53端口、UDP连接、明文传输，可能会受到污染、劫持和监听。 DNSDNS解析过程浏览器提取url中域名部分，首先查询浏览器缓存，若未命中，查询系统hosts文件，若未命中，则向出口网卡指定的DNS服务器发送请求。若未指定，则默认为为DHCP握手响应的DNS服务器，即一般是本地ISP的DNS服务器发起递归查询。本地ISP收到DNS">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/dns.png">
 <meta property="article:published_time" content="2025-08-13T13:05:24.653Z">
-<meta property="article:modified_time" content="2025-08-13T22:23:24.718Z">
+<meta property="article:modified_time" content="2025-08-16T16:39:06.481Z">
 <meta property="article:author" content="Androw Smith">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/dns.png">
   
   
   
@@ -234,7 +236,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          46 字
+          321 字
         
       </span>
     
@@ -245,7 +247,7 @@
         
         
         
-          1 分钟
+          3 分钟
         
       </span>
     
@@ -288,16 +290,10 @@
               <div class="markdown-body">
                 
                 <p>DNS即Domain Name Server,即域名解析服务器，默认53端口、UDP连接、明文传输，可能会受到污染、劫持和监听。</p>
-<h2 id="DNS污染"><a href="#DNS污染" class="headerlink" title="DNS污染"></a>DNS污染</h2><h3 id="本地ISP"><a href="#本地ISP" class="headerlink" title="本地ISP"></a>本地ISP</h3><p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h2 id="DNS"><a href="#DNS" class="headerlink" title="DNS"></a>DNS</h2><h3 id="DNS解析过程"><a href="#DNS解析过程" class="headerlink" title="DNS解析过程"></a>DNS解析过程</h3><p>浏览器提取url中域名部分，首先查询浏览器缓存，若未命中，查询系统hosts文件，若未命中，则向出口网卡指定的DNS服务器发送请求。若未指定，则默认为为DHCP握手响应的DNS服务器，即一般是本地ISP的DNS服务器发起递归查询。本地ISP收到DNS请求后，查询缓存，若未命中，则向根（root)、顶级（TLD）及地方权威域名服务器发起迭代查询，如图1。浏览器收到响应后，根据TTL值将域名缓存到本地。<br><img src="/img/dns.png" srcset="/img/loading.gif" lazyload alt="图1：DNS流程"/><br>More info: <a target="_blank" rel="noopener" href="https://www.google.com/search?q=DNS">Search in Google</a></p>
+<h3 id="劫持和污染"><a href="#劫持和污染" class="headerlink" title="劫持和污染"></a>劫持和污染</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">nslookup google.com<br></code></pre></td></tr></table></figure>
+<p>1.本地ISP出于审查和减少网间结算的目的，对DNS请求进行记录和劫持；<br>2.在国际入网口，GFW会按照黑名单封锁二级和三级域名，将大量域名污染到黑洞IP；<br>3.学校、企业等部署内网审计设备，通过上游部署旁路由，对53端口流量进行劫持和记录。<br>4.部分国产os会将用户指定的dns更改为受审查的dns。</p>
+<p>More info: <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%93%E5%AD%98%E6%B1%A1%E6%9F%93">维基百科：DNS污染</a></p>
 
                 
               </div>
