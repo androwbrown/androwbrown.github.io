@@ -19,22 +19,22 @@
   <meta name="author" content="Androw Smith">
   <meta name="keywords" content="">
   
-    <meta name="description" content="轻松实现“Wifi无感翻墙+去广告+内网穿透”">
+    <meta name="description" content="箭头函数内自动继承了上下文语义中的this对象；在点引用直接调用中，引用对象this指针也会自动传递到被引用方法中。但点引用、引用调用和箭头函数同时出现时，容易混淆，我们把合法的写法做一个总结。我们先来看一段计时器示例：我们把index.html放在&#x2F;public文件夹下，把index.js,app.js,及全局样式表index.css放在&#x2F;source中： 示例1234567">
 <meta property="og:type" content="article">
-<meta property="og:title" content="轻松实现“Wifi无感翻墙+去广告+内网穿透”">
+<meta property="og:title" content="JSX中this对象绑定问题">
 <meta property="og:url" content="http://example.com/2025/08/16/day1/index.html">
 <meta property="og:site_name" content="Androw&#39;s Blog">
-<meta property="og:description" content="轻松实现“Wifi无感翻墙+去广告+内网穿透”">
+<meta property="og:description" content="箭头函数内自动继承了上下文语义中的this对象；在点引用直接调用中，引用对象this指针也会自动传递到被引用方法中。但点引用、引用调用和箭头函数同时出现时，容易混淆，我们把合法的写法做一个总结。我们先来看一段计时器示例：我们把index.html放在&#x2F;public文件夹下，把index.js,app.js,及全局样式表index.css放在&#x2F;source中： 示例1234567">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-08-15T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-09-04T21:17:15.492Z">
+<meta property="article:published_time" content="2025-08-15T23:00:00.000Z">
+<meta property="article:modified_time" content="2025-10-23T15:21:57.347Z">
 <meta property="article:author" content="Androw Smith">
-<meta property="article:tag" content="Adguard Home,OpenWrt,OpenClash,Wireguard,Tunnel">
+<meta property="article:tag" content="JSX,匿名箭头函数,点引用,私有状态">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>轻松实现“Wifi无感翻墙+去广告+内网穿透” - Androw&#39;s Blog</title>
+  <title>JSX中this对象绑定问题 - Androw&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -190,7 +190,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/dynamic/" target="_self">
                 
-                <span>西南交大负面舆情专项报道</span>
+                <span>个人空间</span>
               </a>
             </li>
           
@@ -224,7 +224,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="轻松实现“Wifi无感翻墙+去广告+内网穿透”"></span>
+            <span id="subtitle" data-typed-text="JSX中this对象绑定问题"></span>
           
         </div>
 
@@ -247,7 +247,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          16 字
+          657 字
         
       </span>
     
@@ -258,7 +258,7 @@
         
         
         
-          1 分钟
+          6 分钟
         
       </span>
     
@@ -295,12 +295,17 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">轻松实现“Wifi无感翻墙+去广告+内网穿透”</h1>
+            <h1 id="seo-header">JSX中this对象绑定问题</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="轻松实现“Wifi无感翻墙-去广告-内网穿透”"><a href="#轻松实现“Wifi无感翻墙-去广告-内网穿透”" class="headerlink" title="轻松实现“Wifi无感翻墙+去广告+内网穿透”"></a>轻松实现“Wifi无感翻墙+去广告+内网穿透”</h2>
+                <p>箭头函数内自动继承了上下文语义中的this对象；<br>在点引用直接调用中，引用对象this指针也会自动传递到被引用方法中。但点引用、引用调用和箭头函数同时出现时，容易混淆，我们把合法的写法做一个总结。我们先来看一段计时器示例：我们把index.html放在&#x2F;public文件夹下，把index.js,app.js,及全局样式表index.css放在&#x2F;source中：</p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><code class="hljs bash">import React from <span class="hljs-string">&#x27;react&#x27;</span>;<br>import ReactDOM from <span class="hljs-string">&#x27;react-dom/client&#x27;</span>;<br>import <span class="hljs-string">&#x27;./index.css&#x27;</span>;<br>class Counter extends React.Component<br>&#123;<br>constructor(props)<br>&#123;<br>super(props);<br>this.state=&#123;count: 0&#125;;//状态对象初始化状态<br>&#125;<br> ()=&gt;<span class="hljs-function"><span class="hljs-title">Count</span></span>()<br>&#123;<br>this.setState(&#123;count: this.state.count+1&#125;);<br>&#125;<br><span class="hljs-function"><span class="hljs-title">render</span></span>()<br>&#123;<br><span class="hljs-built_in">return</span> (&lt;div&gt;&lt;h2&gt;The Count is &#123;this.state.count&#125;&lt;/h2&gt;&lt;p&gt;&lt;button onClick=&#123;this.Count&#125;&gt;+1&lt;/button&gt;&lt;/p&gt;&lt;/div&gt;);<br>&#125;<br>&#125;<br>class Clocker extends React.Component<br>&#123;<br>constructor(props)<br>&#123;<br>super(props);//调用React.Component构造函数，此后this建立<br>this.state=&#123;<span class="hljs-built_in">date</span>:new Date()&#125;;//状态对象初始化状态，仅能出现在状态函数中<br>&#125;<br><span class="hljs-function"><span class="hljs-title">componentDidMount</span></span>()<br>&#123;<br>this.timerId=setInterval(()=&gt;this.tick(),<span class="hljs-number">1000</span>);<br>//默认单位为毫秒，即每隔<span class="hljs-number">1</span>s立即调用this.tick方法<br>&#125;<br>componentWillUnmount()<br>&#123;<br>clearInterval(this.timerId);<br>&#125;<br>tick()<br>&#123;<br>    this.setState(&#123;date:new Date()&#125;);<br>&#125;<br>render()<br>&#123;<br>return (&lt;div&gt;&lt;p&gt;The time is &#123;this.state.date.toLocaleTimeString()&#125;&lt;/p&gt;&lt;/div&gt;);<br>&#125;<br>&#125;<br>const test=ReactDOM.createRoot(document.getElementById(&quot;test&quot;));<br>const root=ReactDOM.createRoot(document.getElementById(<span class="hljs-string">&quot;root&quot;</span>));<br>root.render(&lt;Clocker/&gt;);<br>test.render(&lt;Counter/&gt;);<br></code></pre></td></tr></table></figure>
+
+<p>为什么Clocker类方法tick()是普通函数，而Counter类方法Count必须是箭头函数呢？</p>
+<p>写法1：<br><code>&lt;button onClick=&#123;this.Counter&#125;&gt;</code>，Counter()必须为箭头函数。这是一个引用调用，在执行主函数React.render(<Counter/>)时，由于只是取出Counter函数，不会发生死循环。<br>写法2：<br><code>&lt;button onClick=&#123;()=&gt;this.Counter()&#125;&gt;</code>这是一个匿名箭头函数，内部采用直接引用，因此在点击时不会出现“裸引用”，Counter既可以是普通函数，也可以是箭头函数。render继承当前实例的this，箭头函数内部继承render的this，Counter函数内部继承引用对象，即箭头函数里的this，不会出现undefined。<br>错误写法：<code>&lt;button onClick=&#123;this.Counter()&#125;</code>，这种情况下，编译时会出现render()-&gt;Counter()-&gt;setState()-&gt;render()死循环<br>错误写法：<code>&lt;button onClick=&#123;()=&gt;this.Count&#125;</code>,这种情况下，不会死循环，但点击无反应，因为箭头函数内部是引用调用。<br>错误写法：<code>&lt;button onCLick=&#123;this.Count&#125;</code>,且Count为普通函数。这种情况下，不会死循环，但点击时对“已取出”的方法Count进行“裸引用”，按钮无反应。</p>
+
                 
               </div>
             
@@ -312,7 +317,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Adguard-Home-OpenWrt-OpenClash-Wireguard-Tunnel/" class="print-no-link">#Adguard Home,OpenWrt,OpenClash,Wireguard,Tunnel</a>
+        <a href="/tags/JSX-%E5%8C%BF%E5%90%8D%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0-%E7%82%B9%E5%BC%95%E7%94%A8-%E7%A7%81%E6%9C%89%E7%8A%B6%E6%80%81/" class="print-no-link">#JSX,匿名箭头函数,点引用,私有状态</a>
       
     </div>
   
@@ -324,7 +329,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>轻松实现“Wifi无感翻墙+去广告+内网穿透”</div>
+      <div>JSX中this对象绑定问题</div>
       <div>http://example.com/2025/08/16/day1/</div>
     </div>
     <div class="license-meta">
@@ -369,15 +374,15 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/2025/08/16/hello-world/" title="DNS简介">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">DNS简介</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
-                    
-                      <a href="/2025/08/16/hello-world/" title="DNS简介">
-                        <span class="hidden-mobile">DNS简介</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
                     
                   </article>
                 </div>
