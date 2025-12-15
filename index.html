@@ -21,7 +21,7 @@
   
     <meta property="og:type" content="website">
 <meta property="og:title" content="Androw&#39;s Blog">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="https://androwsblog.dpdns.org/index.html">
 <meta property="og:site_name" content="Androw&#39;s Blog">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="Androw Smith">
@@ -61,7 +61,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"androwsblog.dpdns.org","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -252,14 +252,14 @@
       <h2 class="index-header">
         
         <a href="/2025/08/16/hello-world/" target="_self">
-          DNS简介
+          Openwrt上通过AdguardHome和OpenClash部署私人DNS
         </a>
       </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/2025/08/16/hello-world/" target="_self">
         <div>
-          DNS即Domain Name Server,即域名解析服务器，默认53端口、UDP连接、明文传输，可能会受到污染、劫持和监听。 DNSDNS解析过程浏览器提取url中域名部分，首先查询浏览器缓存，若未命中，查询系统hosts文件，若未命中，则向出口网卡指定的DNS服务器发送请求。若未指定，则默认为为DHCP握手响应的DNS服务器，即一般是本地ISP的DNS服务器发起递归查询。本地ISP收到DNS
+          DNS即Domain Name Server,即域名解析服务器，默认53端口、UDP连接、明文传输，可能会受到污染、劫持和监听。本文介绍了：DNS污染与劫持,分流策略的潜在风险,为什么选择ASIS,搭建局域网私人DNS
         </div>
       </a>
 
@@ -292,14 +292,14 @@
       <h2 class="index-header">
         
         <a href="/2025/08/16/day1/" target="_self">
-          JSX中this对象绑定问题
+          React JSX 中的 this 绑定与事件处理机制
         </a>
       </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/2025/08/16/day1/" target="_self">
         <div>
-          箭头函数内自动继承了上下文语义中的this对象；在点引用直接调用中，引用对象this指针也会自动传递到被引用方法中。但点引用、引用调用和箭头函数同时出现时，容易混淆，我们把合法的写法做一个总结。我们先来看一段计时器示例：我们把index.html放在&#x2F;public文件夹下，把index.js,app.js,及全局样式表index.css放在&#x2F;source中： 示例1234567
+          箭头函数（Arrow Function）通过词法作用域（Lexical Scoping）特性，自动捕获定义时的上下文 this 指针。在 JavaScript 类组件中，当使用点符号”.”直接调用成员方法时，this 指向通常能够正确传递,但在 React 的 JSX 事件处理场景下，将点符号引用、直接调用与箭头函数混合使用时，极易因 this 绑定机制引发混淆。 代码示例我们假设目录结构如下：i
         </div>
       </a>
 
@@ -317,7 +317,7 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/JSX-%E5%8C%BF%E5%90%8D%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0-%E7%82%B9%E5%BC%95%E7%94%A8-%E7%A7%81%E6%9C%89%E7%8A%B6%E6%80%81/">#JSX,匿名箭头函数,点引用,私有状态</a>
+              <a href="/tags/React-JSX-%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0-%E8%AF%8D%E6%B3%95%E4%BD%9C%E7%94%A8%E5%9F%9F-%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/">#React, JSX, 箭头函数, 词法作用域, 事件委托</a>
             
           </div>
         
